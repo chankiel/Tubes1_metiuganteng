@@ -18,10 +18,10 @@ def get_direction(current_x, current_y, dest_x, dest_y,teleports,bots):
     if not(delta_x==0 or delta_y==0):
         for bot in bots:
             # Jika terdapat bot lawan di kanan atau kiri kita searah tujuan yang menghalangi, bot lawan kita tabrak
-            if bot.position.x == current_x+delta_x and bot.position.y == current_y and delta_x!=0:
+            if bot.position.x == current_x+delta_x and bot.position.y == current_y:
                 delta_y = 0
             # Jika terdapat bot lawan di atas atau bawah kita searah tujuan yang menghalangi, bot lawan kita tabrak
-            elif bot.position.y == current_y+delta_y and bot.position.x == current_x and delta_y!=0:
+            elif bot.position.y == current_y+delta_y and bot.position.x == current_x:
                 delta_x = 0
     if not(delta_x==0 or delta_y==0):
         for tele in teleports:
@@ -84,7 +84,7 @@ def worthDim(teleports,diamonds,pos):
 # Mengembalikan nilai terkecil total jarak dibagi total poin antara mengambil diamond pada dimPos aja atau
 # mengambil diamond dimPos dan diamond closest
 def bestRatio(poin,dimPos, botPos, diamonds, teleports):
-    # distDim untuk mendapatkan jarak terdekat dengan diamond A
+    # distDim untuk mendapatkan jarak terdekat bot dengan diamond A
     distDim = bestRoute(teleports,dimPos,botPos)[0]
     # closest untuk mendapatkan informasi diamond yang terdekat dengan A, kita sebut B
     closest = worthDim(teleports,diamonds,dimPos)
