@@ -6,6 +6,7 @@
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Programming Language Used](#languages)
+- [Notes](#notes)
 - [Contacts](#contact)
 
 ## General Information <a name="general-information"></a>
@@ -80,7 +81,7 @@ python main.py --logic <Your_Logic> --email=your_email@example.com --name=your_n
 
 - Python
 
-## Notes
+## Notes <a name="notes"></a>
 
 - If you run multiple bots, make sure each emails and names are unique
 - The email could be anything as long as it follows a correct email syntax
